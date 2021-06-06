@@ -1,0 +1,27 @@
+
+:root{
+    --bb-color:white;
+   
+}
+
+.Reference li{
+
+	list-style:none;
+
+	font-size: 20px;
+	padding: 20px 20px;
+	
+}
+h3{
+    font-size: 1.75rem;
+    overflow-y: hidden;
+    text-align: center;
+}
+.main div{
+    margin: 20px;
+}
+*{
+	--secondary-color:rgb(255, 255, 255);
+	--primary-color:#000;
+    transition: all 0.1s;
+}

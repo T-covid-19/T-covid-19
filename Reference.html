@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>疫情網站</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/Reference.css">
+
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/marked@0.3.6"></script>
+	<script src="https://unpkg.com/lodash@4.16.0"></script>
+</head>
+
+<body>
+	<div class="main0">
+		<div class="cursorimgshow">
+			<img src="#" id="cursorimgshow">
+		</div>
+		<div class="menunavbg">
+		</div>
+		<header>
+			<!-- <img src="" alt=""> -->
+			<a href="#gotop" id="gogotop"><img v-if="btnlogo" src="img/logo.svg" class="logo"></a>
+
+			<nav class="navbar">
+				<ul>
+					<li><a href="index.html">返回網頁</a></li>
+					<li><label id="dark-change"></label></li>
+
+				</ul>
+			</nav>
+			<a id="menu"><img v-if="btnlogo" src="img/menu.svg" class="logo"></a>
+		</header>
+		<div id="menunav">
+			<div>
+				<ul>
+					<li><a href="index.html">返回網頁</a></li>
+
+				</ul>
+			</div>
+
+		</div>
+		<div class="bg1" id="gotop">
+
+		</div>
+
+		<div class="main container Reference" id="mainvue">
+			<div>
+				<h3>文獻</h3>
+				<ul>
+					<li>1. 嚴重特殊傳染性肺炎，2021年5月10日，取自：https://reurl.cc/kZNKd3</li>
+
+					<li>2. 嚴重特殊傳染性肺炎檢測，2021年5月11日，取自：https://reurl.cc/MA1K0p</li>
+
+					<li>3. 瑞德西韋，2021年4月25日，取自：https://reurl.cc/yE1V4q4. 法匹拉韋，2021年4月25日，取自：https://reurl.cc/a90yAY</li>
+					<li>4. 法匹拉韋，2021年4月25日，取自：https://reurl.cc/a90yAY5. 奎寧，2021年4月25日，取自：https://reurl.cc/yE1VaE</li>
+					<li>5. 奎寧，2021年4月25日，取自：https://reurl.cc/yE1VaE6. 台灣衛生福利部疾病管制署疫苗原理，2021年5月22日，</li>
+					<li>6. 台灣衛生福利部疾病管制署疫苗原理，2021年5月22日，取自：https://reurl.cc/2rMqz6</li>
+
+					<li>7. 衛生福利部疾病管制署（2021）。COVID-19疫苗系列專欄：什麼是SARS-CoV-2病毒變異株？。<i>第37卷（第9期）</i></li>
+
+					<li>8. Changes in symptomatology, reinfection, and transmissibility associated with the SARS-CoV-2
+						variant B.1.1.7: an ecological study。《刺胳針：微生物》。2021年5月15日，取自：https://reurl.cc/qgzeZq</li>
+
+
+					<li>9. Alex W H Chin，Julie T S Chu，Mahen R A Perera，Kenrie P Y Hui，Hui-Ling Yen，Michael C
+						WChan，Malik Peiris，Leo L M Poon，Show less（2020）。Stability of SARS-CoV-2 in different
+						environmental conditions。The Lancet，<i>第1卷（第1期）</i></li>
+
+
+
+					<li>10. Aurélien Dinh，Alexandre Bleibtreu，Luc Jaulmes，Agnes Dechartres，on behalf of
+						theAP-HP/Universities/Inserm COVID-19 research collaboration（2021）。Clinical characteristics and
+						factorsassociated with hospital admission or death in 43103 adult outpatients with coronavirus
+						disease 2019 managed with the Covidom telesurveillance solution: a prospective cohort
+						study。<i>clinicalmicrobiologyandinfection</i></li>
+
+
+
+
+
+					<li>11.美國疾病管制與預防中心(2021年5月21日）。全球變種病毒報告 （Global Variants Report）。檢自：https://reurl.cc/Nr1KKp</li>
+
+					<li>12.美國疾病管制與預防中心(2021年5月8日）。美國變種病毒比例（Variant Proportions）。檢自：https://reurl.cc/Nr1KKp</li>
+
+				</ul>
+			</div>
+			<div>
+				<h3>圖片</h3>
+				<ul>
+					<li>1.世界衛生組織幹事長譚德塞（風傳媒），2020年3月12日，取自：https://reurl.cc/dGz49D</li>
+
+					<li>2.各國變種病毒趨勢，2020年5月22日，取自：https://reurl.cc/AknvzY</li>
+
+					<li>3.全球、台灣六種應變類型的時間分佈，2021年5月10日，取自https://reurl.cc/O07Kvr</li>
+					<li>4.陳時中施打AZ疫苗（中央社），2021年3月22日，取自：https://reurl.cc/MA1Epp</li>
+
+
+				</ul>
+			</div>
+
+		</div>
+
+
+
+	</div>
+	<footer>
+		<div class="row">
+			<div class="col-12">
+				<li><a href="Reference.html">點擊查看專題</a></li>
+				<li><a href="index.html">點擊查看網頁</a></li>
+			</div>
+		</div>
+	</footer>
+
+	</div>
+	</div>
+	<script src="js/bootstrap-4.0.0.js"></script>
+	<script src="js/timeline.js"></script>
+
+	<script src="js/all.js"></script>
+
+</body>
+
+</html>

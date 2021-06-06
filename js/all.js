@@ -320,11 +320,24 @@ var content = document.getElementsByTagName('body')[0];
 var btn = document.getElementsByClassName("btnli");
 var imgop = document.getElementsByTagName("img");
 var darkmode = document.getElementById('dark-change');
+var darkmode1 = document.getElementById('dark-change-1');
 darkmode.addEventListener('click', function () {
     darkmode.classList.toggle('active');
     content.classList.toggle("night");
     btn.classList.toggle('btnchange');
 });
+darkmode1.addEventListener('click', function () {
+    content.classList.toggle("night");
+    $("#dark-change-1").text("黑色模式")
+});
+
+$("#dark-change-1").click(function () {
+    if ($("body").hasClass("night")) {
+        $("#dark-change-1").text("白色模式")
+
+    };
+});
+
 darkmode.onclick = function () {
     document.body.classList.toggle("btnchange")
 }

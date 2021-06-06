@@ -17,667 +17,622 @@
 </head>
 
 <body>
-	<div class="cursorimgshow">
-		<img src="#" id="cursorimgshow">
-	</div>
-	<div class="menunavbg">
-	</div>
-	<header>
-		<!-- <img src="" alt=""> -->
-		<a href="#gotop" id="gogotop"><img v-if="btnlogo" src="img/logo.svg" class="logo"></a>
-
-		<nav class="navbar">
-			<ul>
-				<li><a href="#present">來源</a></li>
-				<li><a href="#Introduction">介紹</a></li>
-				<li><a href="#variant">變種病毒</a></li>
-				<li><a href="#Medical">醫療</a></li>
-				<li><a href="#timeline">大事紀</a></li>
-				<li><label id="dark-change"></label></li>
-			</ul>
-		</nav>
-		<a id="menu"><img v-if="btnlogo" src="img/menu.svg" class="logo"></a>
-	</header>
-	<div id="menunav">
-		<div>
-			<ul>
-				<li><a href="#present">來源</a></li>
-				<li><a href="#Introduction">介紹</a></li>
-				<li><a href="#variant">變種病毒</a></li>
-				<li><a href="#Medical">醫療</a></li>
-				<li><a href="#timeline">大事紀</a></li>
-				<li><label id="dark-change"></label></li>
-			</ul>
+	<div class="main0">
+		<div class="cursorimgshow">
+			<img src="#" id="cursorimgshow">
 		</div>
-
-	</div>
-	<div class="bg1" id="gotop">
-
-	</div>
-
-	<div class="main container" id="mainvue">
-
-		<div class="present content " id="present">
-			<div class="row">
-				<div class="col-12">
-					<p class="title">COVID-19是什麼</p>
-				</div>
-				<div class="w-100 ">
-					<div class=" textbtn row">
-						<div class="col-sm-4">
-							<li class="btnli" @click="presentIndex = 0">起源</li>
-						</div>
-						<div class="col-sm-4">
-							<li class="btnli" @click="presentIndex = 1">命名</li>
-
-						</div>
-						<div class="col-sm-4">
-							<li class="btnli" @click="presentIndex = 2">來源</li>
-
-						</div>
-
-
-
-					</div>
-
-				</div>
-
-				<div class=" text">
-					<h4 class="col">{{present.title}}</h4>
-					<div class="row textcontent">
-						<div class="col-sm-6">
-							<p v-html="present.content"></p>
-						</div>
-						<div class="col-sm-6"><img :src="present.img">
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="menunavbg">
 		</div>
+		<header>
+			<!-- <img src="" alt=""> -->
+			<a href="#gotop" id="gogotop"><img v-if="btnlogo" src="img/logo.svg" class="logo"></a>
 
-		<div class="Introduction content " id="Introduction">
-			<div class="row">
-				<div class="col-12">
-					<p class="title">COVID-19介紹</p>
-				</div>
-				<div class="w-100">
-					<div class="textbtn  row">
-						<div class="col-sm-6">
-							<li class="btnli" @click="IntroductionIndex = 0">型態</li>
-						</div>
-						<div class="col-sm-6">
-							<li class="btnli" @click="IntroductionIndex = 1">症狀</li>
-						</div>
-
-						<br>
-
-					</div>
-				</div>
-				<div class=" text">
-					<h4 class="col">{{Introduction.title}}</h4>
-					<div class="row textcontent">
-						<div v-if="IntroductionIndex == '0'" class="row">
-							<div class="col-sm-6">
-								<p>{{Introduction.content}}</p>
-							</div>
-							<div class="col-sm-6">
-
-								<img v-if="IntroductionIndex == '0'" :src="Introduction.img" class="textimg">
-							</div>
-						</div>
-						<div v-else>
-							<div class="col-sm-12">
-
-								<p>{{Introduction.content}}</p>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="variant content " id="variant">
-			<div class="row">
-				<div class="col-12">
-					<p class="title">COVID-19變種病毒</p>
-				</div>
-				<div class="w-100">
-					<div class="textbtn row">
-						<div class="col-sm-6">
-							<li class="btnli" @click="variantIndex = 0">變種病毒介紹</li>
-
-						</div>
-						<div class="col-sm-6">
-							<li class="btnli" @click="variantIndex = 1">變種病毒類型</li>
-
-						</div>
-
-						<br>
-
-
-					</div>
-				</div>
-
-				<div class=" text">
-					<h4 class="col">{{variant.title}}</h4>
-					<div class="row textcontent1">
-						<div class="col-sm-4">
-							<div v-if="variantIndex =='0'" class="row w-100">
-
-							</div>
-							<div v-else class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="variantIndex = 1">英國變種病毒</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="variantIndex = 2">南非變種病毒</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="variantIndex = 3">巴西變種病毒</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="variantIndex = 4">印度變種病毒</li>
-								</div>
-							</div>
-						</div>
-						<div v-if="variantIndex =='0'" class="col-sm-12">
-
-							<p v-html="variant.content"></p>
-							<h4>全球變異病毒主要類型</h4>
-							<img :src="variant.img1" width="100%" class="cursorimg ">
-							<br><br>
-							<h4>台灣變異病毒主要類型</h4>
-							<img :src="variant.img2" width="100%" class="cursorimg">
-
-						</div>
-						<div v-if="variantIndex =='1'" class="col-sm-8">
-							<p v-html="variant.content1" class="w-100"></p>
-							<h5>B.1.1.7在英國高峰時期</h5>
-							<img :src="variant.img1" width="100%" class="cursorimg">
-							<p v-html="variant.content2"></p>
-							<h4>B.1.1.7在全球散播情形</h4>
-							<img :src="variant.img2" width="100%" class="cursorimg">
-							<p v-html="variant.content3"></p>
-							<h5>B.1.1.7在主要散播國家新增比例占比</h5>
-							<img :src="variant.img3" width="100%" class="cursorimg">
-							<p v-html="variant.content4"></p>
-							<h5>B.1.1.7在美國新增比例占比</h5>
-							<img :src="variant.img4" width="100%" class="cursorimg">
-							<p v-html="variant.content5"></p>
-							<h5>B.1.1.7症狀分布</h5>
-							<img :src="variant.img5" width="100%" class="cursorimg">
-							<p v-html="variant.content6"></p>
-						</div>
-						<div v-if="variantIndex =='2'" class="col-sm-8">
-							<p v-html="variant.content1" class="w-100"></p>
-							<h5 v-html="variant.title1" class="w-100"></h5>
-							<img :src="variant.img1" width="100%" class="cursorimg">
-							<h5 v-html="variant.title2" class="w-100"></h5>
-							<img :src="variant.img2" width="100%" class="cursorimg">
-							<p v-html="variant.content2"></p>
-							<h5 v-html="variant.title3" class="w-100"></h5>
-							<img :src="variant.img3" width="100%" class="cursorimg">
-						</div>
-						<div v-if="variantIndex =='3'" class="col-sm-8">
-							<p v-html="variant.content1" class="w-100"></p>
-							<h5 v-html="variant.title1" class="w-100"></h5>
-							<img :src="variant.img1" width="100%" class="cursorimg">
-							<h5 v-html="variant.title2" class="w-100"></h5>
-							<img :src="variant.img2" width="100%" class="cursorimg">
-							<h5 v-html="variant.title3" class="w-100"></h5>
-							<img :src="variant.img3" width="100%" class="cursorimg">
-						</div>
-						<div v-if="variantIndex=='4'" class="col-sm-8">
-							<p v-html="variant.content1" class="w-100"></p>
-							<h5 v-html="variant.title1" class="w-100"></h5>
-							<img :src="variant.img1" width="100%" class="cursorimg">
-							<p v-html="variant.content2" class="w-100"></p>
-							<h5 v-html="variant.title2" class="w-100"></h5>
-							<img :src="variant.img2" width="100%" class="cursorimg">
-							<p v-html="variant.content3" class="w-100"></p>
-							<h5 v-html="variant.title3" class="w-100"></h5>
-							<img :src="variant.img3" width="100%" class="cursorimg">
-							<h5 v-html="variant.title4" class="w-100"></h5>
-							<img :src="variant.img4" width="100%" class="cursorimg">
-						</div>
-					</div>
-				</div>
+			<nav class="navbar">
+				<ul>
+					<li><a href="#present">來源</a></li>
+					<li><a href="#Introduction">介紹</a></li>
+					<li><a href="#variant">變種病毒</a></li>
+					<li><a href="#Medical">醫療</a></li>
+					<li><a href="#timeline">大事紀</a></li>
+				</ul>
+				<ul>
+					<li><label id="dark-change"></label></li>
+				</ul>
+			</nav>
+			<a id="menu"><img v-if="btnlogo" src="img/menu.svg" class="logo"></a>
+		</header>
+		<div id="menunav">
+			<div>
+				<ul>
+					<li><a href="#present">來源</a></li>
+					<li><a href="#Introduction">介紹</a></li>
+					<li><a href="#variant">變種病毒</a></li>
+					<li><a href="#Medical">醫療</a></li>
+					<li><a href="#timeline">大事紀</a></li>
+					<li><span class="w-100">
+							<p id="dark-change-1">黑暗模式</p>
+						</span></li>
+				</ul>
 			</div>
 
 		</div>
+		<div class="bg1" id="gotop">
 
-		<div class="Medical content " id="Medical">
-			<div class="row">
-				<div class="col-12">
-					<p class="title">COVID-19醫療</p>
-				</div>
-				<div class="w-100">
-					<div class="textbtn  row">
-						<div class="col-sm-4">
-							<li class="btnli" @click="MedicalIndex = 0">檢測</li>
-						</div>
-						<div class="col-sm-4">
-							<li class="btnli" @click="MedicalIndex = 4">藥物</li>
-						</div>
-						<div class="col-sm-4">
-							<li class="btnli" @click="MedicalIndex = 8">疫苗</li>
-						</div>
-						<br>
-
-					</div>
-				</div>
-				<div class=" text">
-					<h4 class="col">{{Medical.title}}</h4>
-					<div class="row textcontent1">
-						<div class="col-sm-4">
-
-							<div v-if="MedicalIndex =='0'" class="row w-100 btnlifontsize">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
-									</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex =='1'" class="row w-100 btnlifontsize">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
-									</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex =='2'" class="row w-100 btnlifontsize">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
-									</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex =='3'" class="row w-100 btnlifontsize">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
-									</li>
-								</div>
-							</div>
-
-							<div v-if="MedicalIndex == '4'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '5'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '6'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '7'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '8'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '9'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '10'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '11'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '12'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
-								</div>
-							</div>
-							<div v-if="MedicalIndex == '13'" class="row w-100">
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
-									</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
-								</div>
-								<div class="col-12">
-									<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
-								</div>
-							</div>
-
-						</div>
-						<div v-if="MedicalIndex =='0'" class="col-sm-8">
-
-							<p v-html="Medical.content1" class="w-100"></p>
-						</div>
-						<div v-if="MedicalIndex =='1'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-						<div v-if="MedicalIndex =='2'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-						<div v-if="MedicalIndex =='3'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-
-						<div v-if="MedicalIndex =='4'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-						</div>
-						<div v-if="MedicalIndex =='5'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-						<div v-if="MedicalIndex =='6'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-						<div v-if="MedicalIndex =='7'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-
-						<div v-if="MedicalIndex =='8'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-							<h5 v-html="Medical.title1"></h5>
-							<img :src="Medical.img1">
-							<h5 v-html="Medical.title2"></h5>
-							<img :src="Medical.img2">
-
-						</div>
-						<div v-if="MedicalIndex =='9'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-
-						</div>
-						<div v-if="MedicalIndex =='10'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-						</div>
-						<div v-if="MedicalIndex =='11'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-							<h5 v-html="Medical.title1"></h5>
-							<img :src="Medical.img1">
-						</div>
-						<div v-if="MedicalIndex =='12'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-						</div>
-						<div v-if="MedicalIndex =='13'" class="col-sm-8">
-							<p v-html="Medical.content1" class="w-100"></p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
-		<div id="timeline">
-			<div class="col-12">
-				<p class="title">COVID-19大事記</p>
-			</div>
-			<div class="timeline content ">
+
+		<div class="main container" id="mainvue">
+
+			<div class="present content " id="present">
 				<div class="row">
-
-				</div>
-				<div v-for="item in itemList" :key="index" class="d1">
-					<div class="d2">
-						<div class="d3">
-							<div class="d3title">
-								<P>{{item.day}}</P>
+					<div class="col-12">
+						<p class="title">COVID-19是什麼</p>
+					</div>
+					<div class="w-100 ">
+						<div class=" textbtn row">
+							<div class="col-sm-4">
+								<li class="btnli" @click="presentIndex = 0">起源</li>
 							</div>
-							<div class="d3content">
-								<p>{{item.content}}</p>
+							<div class="col-sm-4">
+								<li class="btnli" @click="presentIndex = 1">命名</li>
+
+							</div>
+							<div class="col-sm-4">
+								<li class="btnli" @click="presentIndex = 2">來源</li>
+
+							</div>
+
+
+
+						</div>
+
+					</div>
+
+					<div class=" text">
+						<h4 class="col">{{present.title}}</h4>
+						<div class="row textcontent">
+							<div class="col-sm-6">
+								<p v-html="present.content"></p>
+							</div>
+							<div class="col-sm-6"><img :src="present.img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="Introduction content " id="Introduction">
+				<div class="row">
+					<div class="col-12">
+						<p class="title">COVID-19介紹</p>
+					</div>
+					<div class="w-100">
+						<div class="textbtn  row">
+							<div class="col-sm-6">
+								<li class="btnli" @click="IntroductionIndex = 0">型態</li>
+							</div>
+							<div class="col-sm-6">
+								<li class="btnli" @click="IntroductionIndex = 1">症狀</li>
+							</div>
+
+							<br>
+
+						</div>
+					</div>
+					<div class=" text">
+						<h4 class="col">{{Introduction.title}}</h4>
+						<div class="row textcontent">
+							<div v-if="IntroductionIndex == '0'" class="row">
+								<div class="col-sm-6">
+									<p>{{Introduction.content}}</p>
+								</div>
+								<div class="col-sm-6">
+
+									<img v-if="IntroductionIndex == '0'" :src="Introduction.img" class="textimg">
+								</div>
+							</div>
+							<div v-else>
+								<div class="col-sm-12">
+
+									<p>{{Introduction.content}}</p>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="variant content " id="variant">
+				<div class="row">
+					<div class="col-12">
+						<p class="title">COVID-19變種病毒</p>
+					</div>
+					<div class="w-100">
+						<div class="textbtn row">
+							<div class="col-sm-6">
+								<li class="btnli" @click="variantIndex = 0">變種病毒介紹</li>
+
+							</div>
+							<div class="col-sm-6">
+								<li class="btnli" @click="variantIndex = 1">變種病毒類型</li>
+
+							</div>
+
+							<br>
+
+
+						</div>
+					</div>
+
+					<div class=" text">
+						<h4 class="col">{{variant.title}}</h4>
+						<div class="row textcontent1">
+							<div class="col-sm-4">
+								<div v-if="variantIndex =='0'" class="row w-100">
+
+								</div>
+								<div v-else class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="variantIndex = 1">英國變種病毒</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="variantIndex = 2">南非變種病毒</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="variantIndex = 3">巴西變種病毒</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="variantIndex = 4">印度變種病毒</li>
+									</div>
+								</div>
+							</div>
+							<div v-if="variantIndex =='0'" class="col-sm-12">
+
+								<p v-html="variant.content"></p>
+								<h4>全球變異病毒主要類型</h4>
+								<img :src="variant.img1" width="100%" class="cursorimg ">
+								<br><br>
+								<h4>台灣變異病毒主要類型</h4>
+								<img :src="variant.img2" width="100%" class="cursorimg">
+
+							</div>
+							<div v-if="variantIndex =='1'" class="col-sm-8">
+								<p v-html="variant.content1" class="w-100"></p>
+								<h5>B.1.1.7在英國高峰時期</h5>
+								<img :src="variant.img1" width="100%" class="cursorimg">
+								<p v-html="variant.content2"></p>
+								<h4>B.1.1.7在全球散播情形</h4>
+								<img :src="variant.img2" width="100%" class="cursorimg">
+								<p v-html="variant.content3"></p>
+								<h5>B.1.1.7在主要散播國家新增比例占比</h5>
+								<img :src="variant.img3" width="100%" class="cursorimg">
+								<p v-html="variant.content4"></p>
+								<h5>B.1.1.7在美國新增比例占比</h5>
+								<img :src="variant.img4" width="100%" class="cursorimg">
+								<p v-html="variant.content5"></p>
+								<h5>B.1.1.7症狀分布</h5>
+								<img :src="variant.img5" width="100%" class="cursorimg">
+								<p v-html="variant.content6"></p>
+							</div>
+							<div v-if="variantIndex =='2'" class="col-sm-8">
+								<p v-html="variant.content1" class="w-100"></p>
+								<h5 v-html="variant.title1" class="w-100"></h5>
+								<img :src="variant.img1" width="100%" class="cursorimg">
+								<h5 v-html="variant.title2" class="w-100"></h5>
+								<img :src="variant.img2" width="100%" class="cursorimg">
+								<p v-html="variant.content2"></p>
+								<h5 v-html="variant.title3" class="w-100"></h5>
+								<img :src="variant.img3" width="100%" class="cursorimg">
+							</div>
+							<div v-if="variantIndex =='3'" class="col-sm-8">
+								<p v-html="variant.content1" class="w-100"></p>
+								<h5 v-html="variant.title1" class="w-100"></h5>
+								<img :src="variant.img1" width="100%" class="cursorimg">
+								<h5 v-html="variant.title2" class="w-100"></h5>
+								<img :src="variant.img2" width="100%" class="cursorimg">
+								<h5 v-html="variant.title3" class="w-100"></h5>
+								<img :src="variant.img3" width="100%" class="cursorimg">
+							</div>
+							<div v-if="variantIndex=='4'" class="col-sm-8">
+								<p v-html="variant.content1" class="w-100"></p>
+								<h5 v-html="variant.title1" class="w-100"></h5>
+								<img :src="variant.img1" width="100%" class="cursorimg">
+								<p v-html="variant.content2" class="w-100"></p>
+								<h5 v-html="variant.title2" class="w-100"></h5>
+								<img :src="variant.img2" width="100%" class="cursorimg">
+								<p v-html="variant.content3" class="w-100"></p>
+								<h5 v-html="variant.title3" class="w-100"></h5>
+								<img :src="variant.img3" width="100%" class="cursorimg">
+								<h5 v-html="variant.title4" class="w-100"></h5>
+								<img :src="variant.img4" width="100%" class="cursorimg">
 							</div>
 						</div>
 					</div>
 				</div>
 
 			</div>
+
+			<div class="Medical content " id="Medical">
+				<div class="row">
+					<div class="col-12">
+						<p class="title">COVID-19醫療</p>
+					</div>
+					<div class="w-100">
+						<div class="textbtn  row">
+							<div class="col-sm-4">
+								<li class="btnli" @click="MedicalIndex = 0">檢測</li>
+							</div>
+							<div class="col-sm-4">
+								<li class="btnli" @click="MedicalIndex = 4">藥物</li>
+							</div>
+							<div class="col-sm-4">
+								<li class="btnli" @click="MedicalIndex = 8">疫苗</li>
+							</div>
+							<br>
+
+						</div>
+					</div>
+					<div class=" text">
+						<h4 class="col">{{Medical.title}}</h4>
+						<div class="row textcontent1">
+							<div class="col-sm-4">
+
+								<div v-if="MedicalIndex =='0'" class="row w-100 btnlifontsize">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
+										</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex =='1'" class="row w-100 btnlifontsize">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
+										</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex =='2'" class="row w-100 btnlifontsize">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
+										</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex =='3'" class="row w-100 btnlifontsize">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 0">檢測方式</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 1">核酸分子檢測（RT-PCR檢測）</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 2">蛋白質檢測（抗原快篩）
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 3">抗體檢測（抗體快篩）
+										</li>
+									</div>
+								</div>
+
+								<div v-if="MedicalIndex == '4'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '5'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '6'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '7'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 4">治癒藥物</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 5">瑞德西韋</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 6">法匹拉韋
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 7">奎寧</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '8'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '9'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '10'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '11'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '12'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
+									</div>
+								</div>
+								<div v-if="MedicalIndex == '13'" class="row w-100">
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 8">疫苗介紹</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 9">疫苗原理</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 10">BNT疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 11">AZ疫苗
+										</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 12">Moderna疫苗</li>
+									</div>
+									<div class="col-12">
+										<li class="btnli" @click="MedicalIndex = 13">國產疫苗</li>
+									</div>
+								</div>
+
+							</div>
+							<div v-if="MedicalIndex =='0'" class="col-sm-8">
+
+								<p v-html="Medical.content1" class="w-100"></p>
+							</div>
+							<div v-if="MedicalIndex =='1'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+							<div v-if="MedicalIndex =='2'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+							<div v-if="MedicalIndex =='3'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+
+							<div v-if="MedicalIndex =='4'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+							</div>
+							<div v-if="MedicalIndex =='5'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+							<div v-if="MedicalIndex =='6'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+							<div v-if="MedicalIndex =='7'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+
+							<div v-if="MedicalIndex =='8'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+								<h5 v-html="Medical.title1"></h5>
+								<img :src="Medical.img1">
+								<h5 v-html="Medical.title2"></h5>
+								<img :src="Medical.img2">
+
+							</div>
+							<div v-if="MedicalIndex =='9'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+
+							</div>
+							<div v-if="MedicalIndex =='10'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+							</div>
+							<div v-if="MedicalIndex =='11'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+								<h5 v-html="Medical.title1"></h5>
+								<img :src="Medical.img1">
+							</div>
+							<div v-if="MedicalIndex =='12'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+							</div>
+							<div v-if="MedicalIndex =='13'" class="col-sm-8">
+								<p v-html="Medical.content1" class="w-100"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="timeline">
+				<div class="col-12">
+					<p class="title">COVID-19大事記</p>
+				</div>
+				<div class="timeline content ">
+					<div class="row">
+
+					</div>
+					<div v-for="item in itemList" :key="index" class="d1">
+						<div class="d2">
+							<div class="d3">
+								<div class="d3title">
+									<P>{{item.day}}</P>
+								</div>
+								<div class="d3content">
+									<p>{{item.content}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
 		</div>
-
-
-		<!-- <div class="symptom content " id="symptom">
+		<footer>
 			<div class="row">
 				<div class="col-12">
-					<p class="title">COVID-19介紹</p>
-				</div>
-				<div class="textbtn">
-					<li class="btnli" @click="symptomIndex = 0">起源</li>
-					<li class="btnli" @click="symptomIndex = 1">命名</li>
-
-					<br>
-
-
-
-
-				</div>
-
-				<div class=" text">
-					<h4 class="col-sm-3">{{symptom.title}}</h4>
-					<p class="col-sm-6">{{symptom.content}}</p>
-					<img :src="symptom.img" class="col-sm-3">
+					<li><a href="Reference.html">點擊查看專題</a></li>
+					<li><a href="Reference.html">點擊查看參考資料</a></li>
 				</div>
 			</div>
-		</div> -->
+		</footer>
 
-		<!-- <div id="Timeline" class="content">
-		<div class="row">
-			<div class="col-12">
-				<p class="title">COVID-19時間軸</p>
-			</div>
-			<div class="textbtn">
-				<div id="yearr">
-					<li class="btnli" @click="yearIndex = 0">2019年</li>
-					<li class="btnli" @click="yearIndex = 1">2020年</li>
-
-				</div>
-				<br><br><br><br><br>
-
-			</div>
-			<div v-if="presentIndex == '0'">
-				4563
-			</div>
-			<div v-else-if="presentIndex == '1'">
-				456779
-			</div>
-			<div class="row yearss" v-if="yearIndex == '0'">
-
-				<h4>
-					12月
-				</h4>
-			</div>
-			<div class="row yearss" v-else-if="yearIndex == '1'">
-
-				<h4>
-					1月
-				</h4>
-			</div>
-			13
-
-		</div> -->
 	</div>
 	</div>
-
 	<script src="js/bootstrap-4.0.0.js"></script>
-	<script src="js/timeline.js"></script>
 
 	<script src="js/all.js"></script>
 
