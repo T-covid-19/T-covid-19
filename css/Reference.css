@@ -25,3 +25,19 @@ h3{
 	--primary-color:#000;
     transition: all 0.1s;
 }
+@media  screen and (max-width:1200px){
+  
+    #dark-change{
+        display: inline;
+    }
+    .navbar{
+        display: inline;
+        float: right;
+    }
+    .navbar ul:nth-child(1){
+        display: inline;
+    }
+    #menu{
+        display: none;
+    }
+}
