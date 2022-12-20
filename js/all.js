@@ -1,7 +1,5 @@
-var vm = new Vue({
-    el: '#mainvue',
-    data: {
-
+Vue.createApp({
+    data: function () {
         presents: [ //介紹
             {
                 title: '起源',
@@ -315,6 +313,11 @@ var vm = new Vue({
     //         }, 16)
     //     }
     // }
+}).mount("#mainvue")
+
+var vm = new Vue({
+    el: '#mainvue',
+   
 });
 var content = document.getElementsByTagName('body')[0];
 var btn = document.getElementsByClassName("btnli");
