@@ -460,7 +460,7 @@ Vue.createApp({
 			variantIndex: 0,
 			MedicalIndex: 0,
 		},
-		computed: {
+		/*computed: {
 			present() {
 				return this.presents[this.presentIndex]
 			},
@@ -473,7 +473,7 @@ Vue.createApp({
 			Medical() {
 				return this.Medicals[this.MedicalIndex]
 			},
-		}
+		}*/
 		// methods: {
 		//     Top() {
 		//         const that = this
