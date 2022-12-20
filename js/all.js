@@ -487,6 +487,7 @@ Vue.createApp({
 		//     }
 		// }
 	}
+}
 }).mount("#mainvue")
 //var vm = new Vue({
 //	el: '#mainvue',
