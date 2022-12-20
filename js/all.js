@@ -1,5 +1,6 @@
 Vue.createApp({
     data: function () {
+        return{
         presents: [ //介紹
             {
                 title: '起源',
@@ -313,6 +314,7 @@ Vue.createApp({
     //         }, 16)
     //     }
     // }
+    }
 }).mount("#mainvue")
 
 var vm = new Vue({
